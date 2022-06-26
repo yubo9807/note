@@ -73,8 +73,8 @@
 
 ## line-height: 2; 和 line-height: 200%; 的区别
 
-- line-height: 2;  相对于自身的高度
-- line-height: 200%;  相对于浏览器字体的 2 倍
+- line-height: 2;  相对于自身字体大小的高度 2 倍
+- line-height: 200%;  相对于设置 line-height 元素字体的 2 倍
 
 ## margin 塌陷问题
 

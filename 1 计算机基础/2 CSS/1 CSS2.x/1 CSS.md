@@ -48,6 +48,17 @@
 > (如果权重值一样，则优先级一样，后面的会覆盖前面的)
 > (css 权重中，为 256 进制)
 
+```html
+<div id="id" class="demo" type="div">demo</div>
+```
+
+```css
+#id.demo { color: orange }  /* 100 + 10 = 110 */
+div#id { color: yellow }  /* 1 + 100 = 101 */
+div.demo:hover { color: red }  /* 1 + 10 + 10 = 21 */
+div.demo[type='div'] { color: green }  /* 1 + 10 + 10 = 21 */
+```
+
 ## 复杂选择器:
 
 ```html

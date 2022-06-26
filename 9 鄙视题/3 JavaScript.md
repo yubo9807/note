@@ -21,6 +21,13 @@
 object   function   number   boolean   string   undefined   symbol   bigint
 ```
 
+## JavaScript 中的数字在计算机内存中占多少个 Byte ？
+
+1. JavaScript 中只有一种数字类型：双精度浮点数 64位
+2. 8位 == 1Byte
+3. 64 / 8 = 8Byte
+
+
 ## 没有声明的变量为什么会造成内存泄露
 
 - 全局可看做 window，所以在全局 var 的变量直接放在 window 上，window 上的变量不会被回收，所以占内存，即内存泄露；
@@ -212,7 +219,7 @@ output();
 
 ## 浏览器的垃圾回收机制
 
-- 我们写的 String、Number、Array 等，浏览器会将他们做标记，对于没用的变量收回占用空间
+- 我们写的 String、Number 等，浏览器会将他们做标记，对于没用的变量收回占用空间
 
 1. 标记清除：
     - 在一个作用域中，从代码执行到结束，浏览器会将其中的变量进行回收，进行内存清除，后续这些变量将访问不到；
