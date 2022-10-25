@@ -17,6 +17,10 @@ Retype new password:  # 再次输入
 su username  # 切换账户
 ```
 
+```bash
+chown -R username:username /test  # 允许该用户操作这个文件
+```
+
 ### 密码重置
 
 ```bash
@@ -62,15 +66,12 @@ touch server.js  # 创建文件
 mv index.html test.html  # 文件重命名
 ```
 
-### 文件编辑
-
+## 压缩
 ```bash
-vim index.html  # 打开文件
-i  # 编辑文件
-esc  # 退出编辑
-: q  # 退出文件
-: wq  # 保存退出
-: q!  # 不保存强制退出
+yum install -y unzip zip
+
+zip -r file.zip file
+unzip file.zip -d file
 ```
 
 ## yum
@@ -119,6 +120,7 @@ ps -le  # 查看进程
 kill pid  # 杀死进程 pid
 
 netstat -nultp  # 查看端口
+netstat -ntlp  # 查看开放端口
 ```
 
 ## 后台运行服务
@@ -129,6 +131,4 @@ forever start server.js  # 启动服务
 forever stop server.js  # 停止服务
 
 pm2 start --name 'myName' npm -- run start  # 运行 next 项目
-
-netstat -ntlp  # 查看开放端口
 ```

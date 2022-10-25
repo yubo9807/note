@@ -161,6 +161,8 @@ http {
 
         error_page 500 502 503 504 /50x.html;  # 默认50x对应的访问页面
         location = /50x.html {}
+
+        return 301 http://hpyyb.cn$request_uri;  # 重定向
     }
     
     # https
@@ -180,6 +182,7 @@ http {
             root         /usr/share/nginx/html;
             index        index.html index.htm;
         }
+
     }
 
 }

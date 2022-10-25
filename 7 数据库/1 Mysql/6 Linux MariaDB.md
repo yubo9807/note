@@ -26,7 +26,7 @@ Reload privilege tables now? [Y/n]  -- 是否重新加载权限表，回车
 登录 ： `mysql -uroot -p`
 
 ```sql
-create user username@localhost identified by 'password';  -- 创建用户
+create user 'username'@'localhost' identified by 'password';  -- 创建用户
 
 select user,host from mysql.user;  -- 查看用户
 
