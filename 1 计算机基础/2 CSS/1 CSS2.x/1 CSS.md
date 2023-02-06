@@ -2,6 +2,8 @@
 
 > CSS 全称： cascading style sheet [CSS 官网](https://www.w3.org/TR/CSS22/)
 
+> [Chrome 默认样式表](https://github.com/chromium/chromium/blob/main/third_party/blink/renderer/core/html/resources/html.css)
+
 ## CSS 引入:
 
 #### 1. 行间样式

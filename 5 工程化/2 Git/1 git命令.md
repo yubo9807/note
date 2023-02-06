@@ -28,15 +28,39 @@ git reflog  # 本地操作记录
 
 # 分支
 git branch  # 查看所有分支
-git branch demo1  # 创建分支
-git checkout demo2  # 切换分支
-git merge demo1 demo2  # 合并分支
-git branch -m old_name new_name  # 修改分支名
-git branch -d demo1  # 删除分支（前提：退出要删除的分支）
-git reset --hard main  # 设置主分支为 main
+git branch <branch_name>  # 创建分支
+git checkout <branch_name>  # 切换分支
+git merge <branch_name1> <branch_name2>  # 合并分支
+git branch -m <old_name> <new_name>  # 修改分支名
+git branch -d <branch_name>  # 删除分支（前提：退出要删除的分支）
+git reset --hard <branch_name>  # 设置主分支
 
 # 制作补丁包 (windows 可以用 makecab，用法上有些区别)
-git diff-tree -r --name-only --no-commit-id 465dabd | xargs zip ~/Desktop/patch.zip
+git diff -r --name-only --no-commit-id | xargs zip ~/Desktop/patch.zip
+
+git mv --force Test.js test.js  # 改变文件名而不修改内容
+
+git rm test.js  # 删除文件
+git rm --cached test.js  # 删除文件，但本地保留该文件
+
+# 贮藏
+git stash  # 暂存所有改动
+git stash push test.js  # 暂存指定文件
+git stash -u test.js  # 排除指定文件，暂存其他文件
+git stash save <name>  # 本地暂存名字
+git stash push -m <name>  # 暂存到指定的暂存区
+git stash list  # 查看暂存记录
+
+# 标签
+git tag <tag_name> -a ''  # 创建标签
+git tag  # 查看本地所有标签
+git show <tag_name>  # 查看标签
+git tag -d <tag_name>  # 删除标签
+git tag origin <tag_name>  # 推送到远程仓库
+
+# 操作记录
+git reflog  # 查看本地操作记录
+
 ```
 
 ### 线上仓库操作：

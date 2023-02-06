@@ -90,7 +90,7 @@ npm cache clean -f  # 清除缓存
 npm install -g n
 vim ~/.bash_profile
 	# 添加配置语句
-	export N_PREFIX=/usr/local/node-v7.10.0-linux-x64 #node实际安装位置
+	export N_PREFIX=/usr/local/node-v7.10.0-linux-x64  # node实际安装位置
 	export PATH=$N_PREFIX/bin:$PATH
 n latest
 n stable  # 更新node
@@ -124,6 +124,12 @@ netstat -ntlp  # 查看开放端口
 ```
 
 ## 后台运行服务
+
+```bash
+nohup ./server &  # 后台运行一个服务
+jobs  # 查看 nohub 启动的应用
+kill %1  # 杀掉 nohub 应用1
+```
 
 ```bash
 npm install forever -g  # 安装 forever
