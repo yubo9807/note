@@ -104,7 +104,7 @@
 
     <!-- 主流浏览器和内核，主流浏览器是有一定市场份额，并且有自己独立研发的内核
          浏览器分 shell+内核
-         主流浏览器（必须有独立内核）市场份额大于3%     内核
+         主流浏览器（必须有独立内核）市场份额大于3%        内核
                     IE                              trident
                     Friefox                         Gecko
                     Google chrome                   Webkit/blink

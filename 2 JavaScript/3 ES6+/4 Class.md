@@ -90,3 +90,37 @@ class Dog extends Animal {
 }
 const dog = new Dog('小黑', 3);
 ```
+
+## 还原旧语法
+
+```js
+class Example {
+  constructor(name) {
+    this.name = name;
+  }
+
+  func() {
+    console.log(this.name);
+  }
+}
+```
+
+```js
+"use strict"
+
+Object.defineProperty(Example.prototype, 'func', {
+  enumerable: false,
+})
+function Example(name) {
+  if (this instanceof Example) {
+    throw new TypeError("Class constructor Example cannot be invoked without 'new'");
+  }
+  this.name = name;
+}
+Example.prototype.func = function () {
+  if (this instanceof Example) {
+    throw new TypeError("Class constructor Example cannot be invoked without 'new'");
+  }
+  console.log(this.name);
+}
+```
